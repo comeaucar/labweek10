@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import Output from './Output'
-import './App.css';
+import './styles.css';
 
 export default function Form(props) {
 
@@ -60,26 +60,26 @@ export default function Form(props) {
     return (
         <div>
             <form onSubmit={submitData}>
-                <h2>Input Infomation</h2>
+                <h2>Data Entry Form</h2>
                 
 
-                <label for="email">Email</label>
+                <label style={{padding: "10px"}} htmlFor="email">Email</label>
                 <input type="email" name="email" onChange={readEmail}/>
 
-                <label for="name">Name</label>
+                <label htmlFor="name">Name</label>
                 <input type="text" name="name" onChange={readName}/>
                 <div>
-                <label for="address">Address</label>
-                <input type="text" name="address" onChange={readAddress}/>
+                <label htmlFor="address">Address</label>
+                <input style={{width: "30%"}}type="text" name="address" onChange={readAddress}/>
 
                 <label htmlFor="address2">Address 2</label>
-                <input type="text" name="address2" onChange={readAddress2}/>
+                <input style={{width: "30%" }} type="text" name="address2" onChange={readAddress2}/>
                 </div>
-                <label for="city">City</label>
+                <label htmlForfor="city">City</label>
                 <div>
                 <input type="text" name="city" onChange={readCity}/>
 
-                <label for="province">Province</label>
+                <label htmlFor="province">Province</label>
                 <select onChange={readProvince}>
                     <option value = "">Select Province</option>
                     {
@@ -90,7 +90,7 @@ export default function Form(props) {
                     </select>
 
 
-                <label for="postal">Postal Code</label>
+                <label htmlFor="postal">Postal Code</label>
                 <input name="postal" onChange={readPostal}/>
                 </div>
                 <input type="checkbox" name="cb" onChange={readCheckbox}/>
